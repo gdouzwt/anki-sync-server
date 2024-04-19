@@ -22,7 +22,7 @@ jobs:
             ${{ secrets.DOCKERHUB_USERNAME }}/anki-sync-server
             ghcr.io/${{ github.repository_owner }}/anki-sync-server
           tags: |
-            type=match,pattern={{\d.\d.\d}}
+            type=ref,event=tag
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
