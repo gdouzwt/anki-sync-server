@@ -19,7 +19,7 @@ jobs:
         with:
           # list of Docker images to use as base name for tags
           images: |
-            ${{ secrets.DOCKER_USERNAME }}/anki-sync-server
+            ${{ secrets.DOCKERHUB_USERNAME }}/anki-sync-server
             ghcr.io/${{ github.repository_owner }}/anki-sync-server
           tags: |
             type=semver,pattern={{version}}
@@ -33,8 +33,8 @@ jobs:
       - name: Login to DockerHub
         uses: docker/login-action@v3
         with:
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Login to ghcr.io
         uses: docker/login-action@v3
