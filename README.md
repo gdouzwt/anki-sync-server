@@ -6,17 +6,13 @@ Anki's main form is a desktop application (for Windows, Linux and macOS) which c
 
 This is a personal Anki server, which you can sync against instead of AnkiWeb.
 
-## Deploying on Sealos
-
-[![](https://raw.githubusercontent.com/labring-actions/templates/main/Deploy-on-Sealos.svg)](https://cloud.sealos.io/?openapp=system-template%3FtemplateName%3Danki-sync-server)
-
 ## Deploying with Docker
 
 ```bash
 $ docker run \
     --publish 80:8080 \
     --volume ./data:/syncserver \
-    ghcr.io/yangchuansheng/anki-sync-server:latest
+    ghcr.io/gdouzwt/anki-sync-server:latest
 ```
 
 ## Environment Variables
