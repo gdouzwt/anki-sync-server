@@ -25,3 +25,4 @@ $ docker run \
 |MAX_SYNC_PAYLOAD_MEGS|100|
 |TZ|Asia/Shanghai|
 
+Upgrade to 25.02
